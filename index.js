@@ -17,11 +17,8 @@ require('dotenv').config();
 
 app.use(cors());
 
-
 const hereIsTheUpsideDown = (process.env.UPSIDEDOWN_MODE === 'true');
 
-
-console.log(hereIsTheUpsideDown)
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
     req.query,
